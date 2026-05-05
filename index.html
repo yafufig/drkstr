@@ -51,7 +51,7 @@
             "name": "¿DRKSTR es una empresa de mensajería?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No solo. DRKSTR es una red de fulfillment urbano que conecta inventario, nodos, preparación de pedidos y handoff de entrega."
+              "text": "No solo. DRKSTR es una red de fulfillment urbano que conecta inventario, nodos, procesos y handoff de entrega."
             }
           },
           {
@@ -64,42 +64,26 @@
           },
           {
             "@type": "Question",
-            "name": "¿Necesito enviar todo mi inventario?",
+            "name": "¿Cuánto inventario necesito colocar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. El piloto esta pensado para top-SKU: productos con rotacion alta y demanda comprobada."
+              "text": "Para el piloto recomendamos empezar con inventario limitado y top-SKU. La meta es validar rotacion, zonas y operacion antes de escalar."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Es ingreso pasivo para dueños de espacios?",
+            "name": "¿Tengo que firmar algo antes de aplicar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No exactamente. Un nodo requiere operacion, horarios, recepcion, picking, packing y cumplimiento de procesos."
+              "text": "No. La aplicacion solo ayuda a revisar fit. Si hay match, el siguiente paso es una llamada y la definicion de proximos pasos."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Qué zonas entran en el piloto?",
+            "name": "¿DRKSTR opera la entrega o conecta la operación?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "La seleccion depende de la concentracion de demanda de marcas y la disponibilidad de espacios operables. La prioridad inicial es CDMX."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Cómo se conectan los pedidos?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "En el MVP se puede empezar con flujos simples y externos. Las integraciones ecommerce y WMS se priorizan cuando la demanda piloto justifica automatizacion."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿Qué pasa después de aplicar?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DRKSTR revisa fit, zona, volumen y capacidad operativa. Si hay match, el siguiente paso es una llamada y la definicion del piloto."
+              "text": "DRKSTR conecta inventario, nodos, procesos y handoff de entrega. En el MVP se puede iniciar con flujos simples y partners externos antes de automatizar integraciones profundas."
             }
           }
         ]
@@ -114,14 +98,15 @@
   <!-- End Google Tag Manager (noscript) -->
 
   <header class="nav">
-    <a href="#top" class="logo" aria-label="DRKSTR Mexico home" data-event="menu_click" data-section="nav" data-menu-target="top">
+    <a href="/" class="logo" aria-label="DRKSTR Mexico home" data-event="menu_click" data-section="nav" data-menu-target="home">
       <img src="assets/logo-drkstr.svg" alt="DRKSTR Mexico">
     </a>
     <nav aria-label="Principal">
       <a href="#brands" data-event="menu_click" data-section="nav" data-menu-target="brands">Marcas</a>
       <a href="#nodes" data-event="menu_click" data-section="nav" data-menu-target="nodes">Nodos</a>
-      <a href="#platform" data-event="menu_click" data-section="nav" data-menu-target="platform">Plataforma</a>
+      <a href="#how" data-event="menu_click" data-section="nav" data-menu-target="how">Plataforma</a>
       <a href="#faq" data-event="menu_click" data-section="nav" data-menu-target="faq">FAQ</a>
+      <a href="/privacy.html" data-event="privacy_click" data-section="nav">Aviso</a>
     </nav>
   </header>
 
@@ -132,16 +117,19 @@
         <h1>LA RED URBANA PARA ENTREGAR MÁS RÁPIDO</h1>
         <p class="lead">Conectamos marcas ecommerce con espacios urbanos listos para operar como nodos de fulfillment. Tus productos más cerca. Tus pedidos más rápidos.</p>
         <div class="cta-row">
-          <a class="btn primary" href="#brands" data-event="hero_cta_brand_click" data-section="hero" data-audience="brand">Quiero entregar más rápido</a>
-          <a class="btn secondary" href="#nodes" data-event="hero_cta_node_click" data-section="hero" data-audience="node">Quiero operar un nodo</a>
+          <a class="btn primary" href="#brands" data-event="hero_cta_brand_click" data-section="hero" data-audience="brand">Ver si mi marca aplica</a>
+          <a class="btn secondary" href="#nodes" data-event="hero_cta_node_click" data-section="hero" data-audience="node">Evaluar mi espacio como nodo</a>
+          <a class="btn secondary optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click" data-section="hero" data-destination="whatsapp">WhatsApp</a>
         </div>
-        <p class="micro">Piloto inicial en CDMX. Estamos seleccionando marcas y espacios fundadores.</p>
+        <p class="micro">Toma menos de 2 minutos. Revisamos fit, zona y capacidad antes de avanzar.</p>
       </div>
 
       <aside class="hero-panel" aria-label="DRKSTR network diagram">
         <div class="panel-top">
-          <span>BRANDS</span>
-          <span>NODES</span>
+          <span>BRAND</span>
+          <span>NODE</span>
+          <span>ORDER</span>
+          <span>DELIVERY</span>
         </div>
         <img src="assets/hero-network.svg" alt="Brand, node, order and delivery network">
         <div class="metric-grid">
@@ -150,6 +138,48 @@
           <div><strong>SLA</strong><span>operacion medible</span></div>
         </div>
       </aside>
+    </section>
+
+    <section class="section audience">
+      <p class="eyebrow">START HERE</p>
+      <h2>¿QUÉ QUIERES VALIDAR?</h2>
+      <div class="cards two scenario-grid">
+        <article class="scenario-card brand-card">
+          <div class="sticker-row">
+            <span class="sticker">SKU</span>
+            <span class="sticker">BOXES</span>
+            <span class="sticker">CDMX</span>
+          </div>
+          <h3>SOY MARCA / SELLER</h3>
+          <p>Quiero colocar mis top-SKU cerca de clientes en CDMX y probar entregas más rápidas sin abrir una bodega.</p>
+          <a class="btn primary" href="#brands" data-event="audience_brand_select" data-section="audience_select" data-audience="brand">Ir a marcas</a>
+        </article>
+        <article class="scenario-card node-card">
+          <div class="warehouse-lines" aria-hidden="true"></div>
+          <div class="sticker-row">
+            <span class="sticker white">SHELF</span>
+            <span class="sticker white">PIN</span>
+            <span class="sticker white">SLA</span>
+          </div>
+          <h3>TENGO UN ESPACIO</h3>
+          <p>Quiero saber si mi bodega, local o punto operativo puede funcionar como nodo DRKSTR.</p>
+          <a class="btn secondary" href="#nodes" data-event="audience_node_select" data-section="audience_select" data-audience="node">Ir a nodos</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="how" class="section platform">
+      <div class="section-head">
+        <p class="eyebrow">HOW IT WORKS</p>
+        <h2>TUS PRODUCTOS. NUESTRA RED. ENTREGA LOCAL.</h2>
+        <p class="wide">DRKSTR coloca SKU de mayor rotación en nodos urbanos conectados por tecnología. Cuando llega un pedido, el nodo prepara el producto y hace el handoff para entregar más rápido desde una ubicación cercana.</p>
+      </div>
+      <div class="steps">
+        <div><span>01</span><h3>STORE</h3><p>La marca envía inventario limitado de top-SKU.</p></div>
+        <div><span>02</span><h3>NODE</h3><p>El inventario se ubica cerca de demanda real.</p></div>
+        <div><span>03</span><h3>ORDER</h3><p>La plataforma enruta pedidos y estados.</p></div>
+        <div><span>04</span><h3>DELIVER</h3><p>Pick, pack, courier handoff y feedback.</p></div>
+      </div>
     </section>
 
     <section class="problem block-black">
@@ -164,107 +194,116 @@
       </div>
     </section>
 
-    <section id="platform" class="section platform">
-      <div class="section-head">
-        <p class="eyebrow">HOW IT WORKS</p>
-        <h2>TUS PRODUCTOS. NUESTRA RED. ENTREGA LOCAL.</h2>
-        <p class="wide">DRKSTR coloca tus SKU de mayor rotación en nodos urbanos conectados por tecnología. Cuando llega un pedido, el nodo prepara el producto y lo entrega más rápido desde una ubicación cercana.</p>
+    <section id="brands" class="section branch brand-branch" data-view-event="brand_fit_view" data-section="brands" data-audience="brand">
+      <div class="branch-hero">
+        <div>
+          <p class="eyebrow">FOR BRANDS</p>
+          <h2>VENDE CON ENTREGA EXPRESS SIN ABRIR BODEGAS</h2>
+          <p class="wide">Si ya tienes demanda online, DRKSTR te ayuda a probar inventario local en CDMX: top-SKU cerca del cliente, operación ligera y aprendizaje antes de escalar.</p>
+        </div>
+        <div class="branch-visual pink-shelf" aria-hidden="true">
+          <span>SKU</span>
+          <span>ORDER</span>
+          <span>NODE</span>
+          <span>FAST</span>
+        </div>
       </div>
-      <div class="steps">
-        <div><span>01</span><h3>STORE</h3><p>La marca envía sus top-SKU al piloto.</p></div>
-        <div><span>02</span><h3>NODE</h3><p>El inventario se almacena cerca de la demanda.</p></div>
-        <div><span>03</span><h3>ORDER</h3><p>La plataforma recibe y enruta el pedido.</p></div>
-        <div><span>04</span><h3>DELIVER</h3><p>Pick, pack, handoff y entrega express.</p></div>
-      </div>
-      <div class="platform-grid">
-        <article>
-          <img src="assets/platform_orders_kanban.jpg" alt="Order management board">
-          <h3>Order routing</h3>
-          <p>Pedidos, estados y handoff operacional en un flujo visible para marca y nodo.</p>
-        </article>
-        <article>
-          <img src="assets/platform_city_selection.jpg" alt="City and zone selection interface">
-          <h3>Node matching</h3>
-          <p>La liquidez se valida por zonas: demanda cercana, capacidad disponible y SLA real.</p>
-        </article>
-        <article>
-          <img src="assets/platform_integrations.jpg" alt="Integration interface">
-          <h3>WMS + integraciones</h3>
-          <p>El piloto mide el fit antes de escalar integraciones profundas o flujos avanzados.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section switcher">
-      <p class="eyebrow">TWO SIDES</p>
-      <h2>ELIGE TU LADO DE LA RED</h2>
-      <div class="cards two">
-        <article class="big-card" id="brands">
-          <img src="assets/usecase_sellers.png" alt="" aria-hidden="true">
-          <h3>SOY MARCA / SELLER</h3>
-          <p>Quiero vender con entrega express sin abrir bodegas ni construir operación logística propia.</p>
+      <div class="fit-grid">
+        <article class="fit-card yes">
+          <h3>ESTE PILOTO ES PARA TI SI...</h3>
           <ul>
-            <li>Fulfillment urbano para top-SKU</li>
-            <li>Inventario cerca del cliente en CDMX</li>
-            <li>Pick, pack y delivery handoff</li>
-            <li>Tracking y visibilidad operativa</li>
+            <li>Tienes ventas online recurrentes.</li>
+            <li>Tus pedidos se concentran en CDMX o área metropolitana.</li>
+            <li>5-30 SKU generan una parte importante de tus ventas.</li>
+            <li>Quieres probar entrega más rápida sin abrir una bodega propia.</li>
+            <li>Puedes colocar inventario limitado en un nodo piloto.</li>
           </ul>
-          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScRIzMmyaE9ionKAocDYFeWckqrmcJVm9W8irJusPfNfoH24g/viewform" data-event="brand_section_cta_click" data-form-start="form_brand_start" data-section="brands" data-audience="brand" data-form-type="brand">Aplicar como marca</a>
         </article>
-        <article class="big-card pink-card" id="nodes">
-          <img src="assets/usecase_telecom.png" alt="" aria-hidden="true">
-          <h3>TENGO UN ESPACIO</h3>
-          <p>Quiero convertir mi bodega, local o punto operativo en un nodo DRKSTR.</p>
+        <article class="fit-card no">
+          <h3>NO ES IDEAL SI...</h3>
           <ul>
-            <li>Monetiza espacio disponible</li>
-            <li>Opera pedidos ecommerce con proceso</li>
-            <li>Recepción, picking y packing</li>
-            <li>Ingresos por almacenamiento y operación</li>
+            <li>Solo necesitas mensajería sin inventario local.</li>
+            <li>Todavía no tienes demanda comprobada.</li>
+            <li>Necesitas cobertura nacional desde el día uno.</li>
+            <li>Tus productos requieren operación especial compleja desde el inicio.</li>
           </ul>
-          <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd6J76eWqcs7oBoqSwMUCZdtQbX16nTpHsDEOawGdQ1sMLprg/viewform" data-event="node_section_cta_click" data-form-start="form_node_start" data-section="nodes" data-audience="node" data-form-type="node">Postular mi espacio</a>
         </article>
       </div>
-    </section>
-
-    <section class="section details">
-      <div>
-        <p class="eyebrow">FOR BRANDS</p>
-        <h2>VENDE CON ENTREGA EXPRESS SIN ABRIR BODEGAS</h2>
-        <p>Coloca tus productos más vendidos en nodos urbanos y ofrece entregas rápidas en zonas piloto de CDMX.</p>
-        <p class="quote">Estamos seleccionando marcas fundadoras con demanda comprobada y productos de alta rotación.</p>
-      </div>
-      <div>
-        <p class="eyebrow">FOR NODES</p>
-        <h2>CONVIERTE TU ESPACIO EN UN NODO DRKSTR</h2>
-        <p>Si tienes una bodega, local, punto logístico o espacio operativo en zona urbana, puedes monetizarlo operando fulfillment para marcas ecommerce.</p>
-        <p class="quote">No buscamos solo metros cuadrados. Buscamos espacios capaces de operar con SLA.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#brand-application" data-event="brand_section_cta_click" data-section="brands" data-audience="brand">Ver si mi marca aplica</a>
+        <a class="btn secondary optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="brand_whatsapp_click" data-also-event="whatsapp_click" data-section="brands" data-audience="brand" data-destination="whatsapp">Hablar por WhatsApp</a>
       </div>
     </section>
 
-    <section class="section liquidity block-black">
-      <div>
-        <p class="eyebrow pink">MARKET VALIDATION</p>
-        <h2>UN PILOTO PARA ENCONTRAR LIQUIDEZ REAL</h2>
-        <p>La meta no es prometer cobertura nacional desde el día uno. La meta es mapear dónde coinciden pedidos, inventario, espacios operables y tiempos de entrega competitivos.</p>
+    <section id="nodes" class="section branch node-branch" data-view-event="node_fit_view" data-section="nodes" data-audience="node">
+      <div class="branch-hero">
+        <div>
+          <p class="eyebrow">FOR SPACES</p>
+          <h2>CONVIERTE TU ESPACIO EN UN NODO DRKSTR</h2>
+          <p class="wide">No buscamos solo metros cuadrados. Buscamos espacios capaces de operar con SLA: recepción, orden, picking, packing y handoff con proceso.</p>
+        </div>
+        <div class="branch-visual warehouse-grid" aria-hidden="true">
+          <span>RECEIVE</span>
+          <span>SHELF</span>
+          <span>PACK</span>
+          <span>HANDOFF</span>
+        </div>
       </div>
-      <div class="liquidity-map" aria-label="Demand and supply map">
-        <span class="pin brand">Brands</span>
-        <span class="pin demand">Demand heatmap</span>
-        <span class="pin node">Nodes</span>
-        <span class="pin sla">SLA zones</span>
-        <span class="route route-a"></span>
-        <span class="route route-b"></span>
-        <span class="route route-c"></span>
+      <div class="requirements-card">
+        <h3>UN NODO DRKSTR DEBE PODER...</h3>
+        <ul class="requirement-list">
+          <li>Recibir inventario.</li>
+          <li>Almacenar productos de forma ordenada.</li>
+          <li>Preparar pedidos con proceso.</li>
+          <li>Hacer picking y packing.</li>
+          <li>Entregar paquetes a courier / handoff.</li>
+          <li>Reportar estados operativos.</li>
+          <li>Cumplir horarios y SLA.</li>
+        </ul>
+        <p class="quote">Esto no es ingreso pasivo. Es una operación ligera de fulfillment urbano.</p>
+      </div>
+      <div class="cta-row">
+        <a class="btn secondary" href="#node-application" data-event="node_section_cta_click" data-section="nodes" data-audience="node">Evaluar mi espacio como nodo</a>
+        <a class="btn secondary optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="node_whatsapp_click" data-also-event="whatsapp_click" data-section="nodes" data-audience="node" data-destination="whatsapp">Hablar por WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="after-apply" class="section after-apply" data-view-event="after_apply_view" data-section="after_apply">
+      <p class="eyebrow">NEXT STEP</p>
+      <h2>QUÉ PASA DESPUÉS DE APLICAR</h2>
+      <p class="wide">Aplicar no es un contrato ni un compromiso. Es un fit check para entender si vale la pena avanzar a una llamada y diseñar una prueba.</p>
+      <div class="process-grid">
+        <article>
+          <h3>Para marcas</h3>
+          <ol>
+            <li>Revisamos tu tienda, categoría y volumen.</li>
+            <li>Identificamos top-SKU y zonas de demanda.</li>
+            <li>Estimamos si el piloto CDMX tiene sentido.</li>
+            <li>Si hay fit, agendamos una llamada.</li>
+            <li>Definimos una prueba con inventario limitado.</li>
+          </ol>
+        </article>
+        <article>
+          <h3>Para nodes</h3>
+          <ol>
+            <li>Revisamos ubicación y tipo de espacio.</li>
+            <li>Validamos horarios, acceso y capacidad operativa.</li>
+            <li>Comparamos tu zona con demanda cercana.</li>
+            <li>Si hay match, agendamos una llamada.</li>
+            <li>Definimos requisitos para operar como nodo.</li>
+          </ol>
+        </article>
       </div>
     </section>
 
     <section class="section forms">
       <p class="eyebrow">APPLICATIONS</p>
-      <h2>FORMULARIOS QUE CALIFICAN, NO SOLO CAPTURAN EMAILS</h2>
+      <h2>APLICA AL PILOTO</h2>
+      <p class="wide">Cuéntanos lo mínimo necesario para entender si hay fit. No vendemos promesas: validamos demanda, ubicación, operación y próximos pasos.</p>
       <div class="forms-grid">
-        <article>
-          <h3>Brand fit</h3>
-          <p>Usamos la aplicación para entender demanda, zonas, top-SKU, costos actuales y disposición a colocar inventario en un nodo piloto.</p>
+        <article id="brand-application">
+          <h3>Para marcas y sellers</h3>
+          <p>Revisamos demanda, zonas, top-SKU, costos actuales y disposición a colocar inventario en un nodo piloto.</p>
           <div class="field-tags">
             <span>Monthly orders</span>
             <span>CDMX share</span>
@@ -272,11 +311,11 @@
             <span>Delivery time</span>
             <span>Shipping cost</span>
           </div>
-          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScRIzMmyaE9ionKAocDYFeWckqrmcJVm9W8irJusPfNfoH24g/viewform" data-event="brand_section_cta_click" data-form-start="form_brand_start" data-section="applications" data-audience="brand" data-form-type="brand">Aplicar como marca</a>
+          <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScRIzMmyaE9ionKAocDYFeWckqrmcJVm9W8irJusPfNfoH24g/viewform" target="_blank" rel="noopener noreferrer" data-event="form_brand_start" data-section="applications" data-audience="brand" data-form-type="brand">Aplicar como marca</a>
         </article>
-        <article>
-          <h3>Node capacity</h3>
-          <p>Validamos ubicación, metros disponibles, horarios, staff, internet, CCTV y capacidad real de recepción, picking y packing.</p>
+        <article id="node-application">
+          <h3>Para espacios y operadores</h3>
+          <p>Validamos ubicación, metros disponibles, horarios, staff, acceso, internet, CCTV y capacidad real de recepción, picking y packing.</p>
           <div class="field-tags">
             <span>Neighborhood</span>
             <span>Available m2</span>
@@ -284,21 +323,35 @@
             <span>Staff</span>
             <span>Picking</span>
           </div>
-          <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd6J76eWqcs7oBoqSwMUCZdtQbX16nTpHsDEOawGdQ1sMLprg/viewform" data-event="node_section_cta_click" data-form-start="form_node_start" data-section="applications" data-audience="node" data-form-type="node">Postular espacio</a>
+          <a class="btn dark" href="https://docs.google.com/forms/d/e/1FAIpQLSd6J76eWqcs7oBoqSwMUCZdtQbX16nTpHsDEOawGdQ1sMLprg/viewform" target="_blank" rel="noopener noreferrer" data-event="form_node_start" data-section="applications" data-audience="node" data-form-type="node">Postular mi espacio</a>
         </article>
       </div>
-      <p class="privacy-note">Los formularios externos deben incluir consentimiento: Acepto el Aviso de Privacidad y el uso de mis datos para ser contactado sobre el piloto DRKSTR México.</p>
     </section>
 
-    <section class="section pilot block-black">
+    <section class="section soft-lead">
+      <div>
+        <p class="eyebrow">NOT READY YET?</p>
+        <h2>RECIBIR INFORMACIÓN DEL PILOTO</h2>
+        <p class="wide">¿Todavía no estás listo para aplicar? Déjanos tu email y te enviaremos detalles del piloto CDMX.</p>
+      </div>
+      <a class="btn secondary optional-link" href="SOFT_LEAD_FORM_URL" target="_blank" rel="noopener noreferrer" data-event="soft_lead_click" data-section="soft_lead">Recibir información del piloto</a>
+    </section>
+
+    <section class="section pilot block-black" data-view-event="pilot_slots_view" data-section="pilot">
       <p class="eyebrow pink">PILOT</p>
       <h2>FOUNDING PILOT CDMX</h2>
       <p>Estamos seleccionando un grupo limitado de marcas y espacios para construir la primera red piloto en CDMX.</p>
+      <div class="pilot-slots">
+        <div><strong>20</strong><span>marcas fundadoras</span></div>
+        <div><strong>10-15</strong><span>espacios operables</span></div>
+        <div><strong>3-5</strong><span>zonas piloto en CDMX</span></div>
+        <div><strong>1</strong><span>modelo repetible</span></div>
+      </div>
       <div class="cta-row">
-        <a class="btn primary" href="https://docs.google.com/forms/d/e/1FAIpQLScRIzMmyaE9ionKAocDYFeWckqrmcJVm9W8irJusPfNfoH24g/viewform" data-event="pilot_apply_click" data-form-start="form_brand_start" data-section="pilot" data-audience="brand" data-form-type="brand">Aplicar ahora</a>
-        <a class="btn secondary light" href="https://docs.google.com/forms/d/e/1FAIpQLSd6J76eWqcs7oBoqSwMUCZdtQbX16nTpHsDEOawGdQ1sMLprg/viewform" data-event="pilot_apply_click" data-form-start="form_node_start" data-section="pilot" data-audience="node" data-form-type="node">Postular espacio</a>
-        <a class="btn ghost" href="WHATSAPP_URL" data-event="whatsapp_click" data-section="pilot" data-destination="whatsapp">WhatsApp</a>
-        <a class="btn ghost" href="CALENDLY_URL" data-event="calendly_click" data-section="pilot" data-destination="calendar">Agendar llamada</a>
+        <a class="btn primary" href="#brand-application" data-event="pilot_apply_brand_click" data-section="pilot" data-audience="brand">Aplicar como marca</a>
+        <a class="btn secondary light" href="#node-application" data-event="pilot_apply_node_click" data-section="pilot" data-audience="node">Postular espacio</a>
+        <a class="btn ghost optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click" data-section="pilot" data-destination="whatsapp">WhatsApp</a>
+        <a class="btn ghost optional-link" href="CALENDLY_URL" target="_blank" rel="noopener noreferrer" data-event="calendly_click" data-section="pilot" data-destination="calendar">Agendar llamada</a>
       </div>
     </section>
 
@@ -307,18 +360,25 @@
       <h2>PREGUNTAS FRECUENTES</h2>
       <details><summary>¿DRKSTR es una empresa de mensajería?</summary><p>No solo. DRKSTR es una red de fulfillment urbano. Conectamos inventario, nodos, preparación de pedidos y handoff de entrega.</p></details>
       <details><summary>¿Ya operan en México?</summary><p>Estamos preparando un piloto inicial en CDMX y seleccionando marcas y espacios fundadores. No prometemos una red nacional antes de validar la liquidez local.</p></details>
-      <details><summary>¿Necesito enviar todo mi inventario?</summary><p>No. El piloto está pensado para top-SKU: productos con mayor rotación, demanda comprobada y mejor potencial de entrega rápida.</p></details>
+      <details><summary>¿Cuánto inventario necesito colocar?</summary><p>Para el piloto recomendamos empezar con inventario limitado y top-SKU. La meta es validar rotación, zonas y operación antes de escalar.</p></details>
+      <details><summary>¿Tengo que firmar algo antes de aplicar?</summary><p>No. La aplicación solo nos ayuda a revisar fit. Si hay match, avanzamos a una llamada y definimos próximos pasos.</p></details>
+      <details><summary>¿DRKSTR opera la entrega o conecta la operación?</summary><p>DRKSTR conecta inventario, nodos, procesos y handoff de entrega. En el MVP podemos iniciar con flujos simples y partners externos antes de automatizar integraciones profundas.</p></details>
       <details><summary>¿Es ingreso pasivo para dueños de espacios?</summary><p>No exactamente. Un nodo requiere operación, horarios, recepción, picking, packing y cumplimiento de procesos.</p></details>
       <details><summary>¿Qué zonas entran en el piloto?</summary><p>La selección depende de la concentración de demanda de marcas y la disponibilidad de espacios operables. La prioridad inicial es CDMX.</p></details>
-      <details><summary>¿Cómo se conectan los pedidos?</summary><p>En el MVP podemos empezar con flujos simples y externos. Las integraciones ecommerce y WMS se priorizan cuando la demanda piloto justifica automatización.</p></details>
-      <details><summary>¿Qué pasa después de aplicar?</summary><p>Revisamos fit, zona, volumen y capacidad operativa. Si hay match, avanzamos a una llamada y a la definición del piloto.</p></details>
     </section>
   </main>
+
+  <nav class="mobile-sticky" aria-label="Acciones rápidas">
+    <a href="#brands" data-event="mobile_sticky_brand_click" data-section="mobile_sticky" data-audience="brand">Marca</a>
+    <a href="#nodes" data-event="mobile_sticky_node_click" data-section="mobile_sticky" data-audience="node">Nodo</a>
+    <a class="optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="mobile_sticky_whatsapp_click" data-also-event="whatsapp_click" data-section="mobile_sticky" data-destination="whatsapp">WhatsApp</a>
+  </nav>
 
   <footer>
     <strong>DRKSTR México</strong>
     <span>Urban fulfillment network for faster ecommerce delivery.</span>
-    <a href="privacy.html" data-event="privacy_click" data-section="footer">Aviso de Privacidad</a>
+    <a class="optional-link" href="WHATSAPP_URL" target="_blank" rel="noopener noreferrer" data-event="whatsapp_click" data-section="footer" data-destination="whatsapp">WhatsApp</a>
+    <a href="/privacy.html" data-event="privacy_click" data-section="footer">Aviso de Privacidad</a>
   </footer>
 
   <script src="script.js"></script>

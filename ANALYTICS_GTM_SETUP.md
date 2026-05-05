@@ -54,9 +54,19 @@ Create Custom Event triggers and GA4 Event tags for:
 ```text
 hero_cta_brand_click
 hero_cta_node_click
+audience_brand_select
+audience_node_select
+brand_fit_view
+node_fit_view
 brand_section_cta_click
 node_section_cta_click
-pilot_apply_click
+brand_whatsapp_click
+node_whatsapp_click
+after_apply_view
+pilot_slots_view
+pilot_apply_brand_click
+pilot_apply_node_click
+soft_lead_click
 whatsapp_click
 calendly_click
 form_brand_start
@@ -65,6 +75,9 @@ form_brand_submit
 form_node_submit
 faq_open
 privacy_click
+mobile_sticky_brand_click
+mobile_sticky_node_click
+mobile_sticky_whatsapp_click
 menu_click
 home_return_click
 ```
@@ -111,6 +124,15 @@ Mark these as key events / conversions after events appear in GA4:
 ```text
 form_brand_submit
 form_node_submit
+whatsapp_click
+calendly_click
+```
+
+If Google Forms submit cannot be tracked yet, temporarily use these as secondary key events:
+
+```text
+form_brand_start
+form_node_start
 whatsapp_click
 calendly_click
 ```

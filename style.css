@@ -17,6 +17,11 @@ html {
   scroll-behavior: smooth;
 }
 
+section,
+article[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -67,6 +72,12 @@ img {
 .hero,
 .problem {
   padding: 92px 6vw;
+}
+
+.optional-link[href="WHATSAPP_URL"],
+.optional-link[href="CALENDLY_URL"],
+.optional-link[href="SOFT_LEAD_FORM_URL"] {
+  display: none !important;
 }
 
 .section-grid {
@@ -233,6 +244,80 @@ h3 {
   text-align: center;
 }
 
+.audience {
+  border-top: 4px solid var(--black);
+}
+
+.scenario-grid {
+  align-items: stretch;
+}
+
+.scenario-card {
+  position: relative;
+  min-height: 430px;
+  overflow: hidden;
+}
+
+.scenario-card h3 {
+  margin-top: 28px;
+}
+
+.scenario-card p {
+  max-width: 620px;
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.brand-card {
+  background:
+    linear-gradient(135deg, rgba(255, 79, 189, 0.35), rgba(255, 255, 255, 0) 48%),
+    var(--white);
+}
+
+.node-card {
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    var(--white);
+  background-size: 34px 34px;
+}
+
+.sticker-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sticker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 9px 14px;
+  border: 3px solid var(--black);
+  border-radius: 999px;
+  background: var(--pink);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.sticker.white {
+  background: var(--white);
+}
+
+.warehouse-lines {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  width: 180px;
+  height: 130px;
+  border: 4px solid var(--black);
+  background:
+    repeating-linear-gradient(0deg, transparent 0 22px, var(--black) 22px 25px),
+    var(--pink);
+  opacity: 0.18;
+}
+
 .metric-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 14px;
@@ -355,6 +440,119 @@ details p,
 .platform-grid h3 {
   margin-top: 18px;
   font-size: 34px;
+}
+
+.branch {
+  border-top: 4px solid var(--black);
+}
+
+.branch-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.72fr);
+  gap: 32px;
+  align-items: stretch;
+}
+
+.branch-visual {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-height: 320px;
+  padding: 24px;
+  border: 4px solid var(--black);
+  border-radius: 8px;
+}
+
+.branch-visual span {
+  display: grid;
+  place-items: center;
+  border: 3px solid var(--black);
+  border-radius: 8px;
+  background: var(--white);
+  font-weight: 900;
+}
+
+.pink-shelf {
+  background:
+    linear-gradient(90deg, rgba(255, 79, 189, 0.9) 0 22px, transparent 22px),
+    var(--soft);
+  box-shadow: 10px 10px 0 var(--pink);
+}
+
+.warehouse-grid {
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.12) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.12) 1px, transparent 1px),
+    var(--white);
+  background-size: 36px 36px;
+  box-shadow: 10px 10px 0 var(--black);
+}
+
+.fit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 34px;
+}
+
+.fit-card,
+.requirements-card,
+.process-grid article {
+  padding: 28px;
+  border: 4px solid var(--black);
+  border-radius: 8px;
+  background: var(--white);
+}
+
+.fit-card.yes {
+  box-shadow: 8px 8px 0 var(--pink);
+}
+
+.fit-card.no {
+  background: var(--soft);
+}
+
+.fit-card h3,
+.requirements-card h3,
+.process-grid h3 {
+  font-size: 32px;
+}
+
+.fit-card li,
+.requirements-card li,
+.process-grid li {
+  margin: 10px 0;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.requirements-card {
+  margin-top: 34px;
+  background:
+    linear-gradient(90deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(17, 17, 17, 0.08) 1px, transparent 1px),
+    var(--white);
+  background-size: 32px 32px;
+}
+
+.requirement-list {
+  columns: 2;
+  column-gap: 42px;
+}
+
+.after-apply {
+  background: var(--soft);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
+
+.process-grid ol {
+  padding-left: 22px;
 }
 
 .big-card {
@@ -512,6 +710,49 @@ details p,
   align-items: flex-start;
 }
 
+.soft-lead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 28px;
+  align-items: end;
+  border-top: 4px solid var(--black);
+  background: var(--soft);
+}
+
+.pilot-slots {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.pilot-slots div {
+  min-height: 132px;
+  padding: 20px;
+  border: 3px solid var(--white);
+  border-radius: 8px;
+  background: var(--dark);
+}
+
+.pilot-slots strong,
+.pilot-slots span {
+  display: block;
+}
+
+.pilot-slots strong {
+  color: var(--pink);
+  font-family: "Arial Black", Impact, Arial, sans-serif;
+  font-size: 44px;
+  line-height: 1;
+}
+
+.pilot-slots span {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .field-tags {
   display: flex;
   flex-wrap: wrap;
@@ -558,6 +799,41 @@ footer {
   border-top: 4px solid var(--black);
 }
 
+.mobile-sticky {
+  position: fixed;
+  right: 14px;
+  bottom: 14px;
+  left: 14px;
+  z-index: 20;
+  display: none;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px;
+  border: 3px solid var(--black);
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 6px 6px 0 var(--pink);
+}
+
+.mobile-sticky a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 3px solid var(--black);
+  border-radius: 999px;
+  color: var(--black);
+  font-size: 13px;
+  font-weight: 900;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mobile-sticky a:first-child {
+  background: var(--pink);
+}
+
 @media (max-width: 1060px) {
   .cards.four,
   .steps,
@@ -571,7 +847,11 @@ footer {
   .cards.two,
   .details,
   .liquidity,
-  .forms-grid {
+  .forms-grid,
+  .branch-hero,
+  .fit-grid,
+  .process-grid,
+  .soft-lead {
     grid-template-columns: 1fr;
   }
 
@@ -630,6 +910,14 @@ footer {
 
   .liquidity-map {
     min-height: 360px;
+  }
+
+  .requirement-list {
+    columns: 1;
+  }
+
+  .pilot-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -716,5 +1004,21 @@ footer {
 
   .pin.sla {
     right: 28px;
+  }
+
+  body {
+    padding-bottom: 86px;
+  }
+
+  .mobile-sticky {
+    display: grid;
+  }
+
+  .branch-visual {
+    min-height: 240px;
+  }
+
+  .pilot-slots {
+    grid-template-columns: 1fr;
   }
 }
