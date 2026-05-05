@@ -1,8 +1,6 @@
 window.dataLayer = window.dataLayer || [];
 
 const placeholderUrls = new Set([
-  'BRAND_FORM_URL',
-  'NODE_FORM_URL',
   'WHATSAPP_URL',
   'CALENDLY_URL'
 ]);
@@ -134,6 +132,6 @@ document.querySelectorAll('details').forEach((detail) => {
 });
 
 // Replace placeholders before launch:
-// BRAND_FORM_URL, NODE_FORM_URL, WHATSAPP_URL, CALENDLY_URL.
+// WHATSAPP_URL, CALENDLY_URL.
 // External forms can redirect to /thanks-brand.html, /thanks-node.html,
 // or use /?submitted=brand and /?submitted=node.
