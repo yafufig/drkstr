@@ -30,6 +30,6 @@ Then open `http://localhost:8000`.
 - `index.html`: Spanish Mexico landing page
 - `style.css`: responsive brutalist DRKSTR visual system
 - `script.js`: `dataLayer` CTA, CJM view, form-start, form-submit redirect, FAQ, WhatsApp, Calendly, soft-lead, sticky mobile, and privacy events
-- `assets/`: images, logo, favicon, OG image, and launch reference visuals
+- `assets/`: logo, favicon, OG image, and hero network diagram
 - `thanks-brand.html`, `thanks-node.html`: form success pages that fire submit events
 - `robots.txt`, `sitemap.xml`, `404.html`, `privacy.html`: GitHub Pages support files
