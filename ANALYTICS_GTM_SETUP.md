@@ -68,7 +68,7 @@ pilot_apply_brand_click
 pilot_apply_node_click
 soft_lead_click
 whatsapp_click
-calendly_click
+email_click
 form_brand_start
 form_node_start
 form_brand_submit
@@ -125,7 +125,6 @@ Mark these as key events / conversions after events appear in GA4:
 form_brand_submit
 form_node_submit
 whatsapp_click
-calendly_click
 ```
 
 If Google Forms submit cannot be tracked yet, temporarily use these as secondary key events:
@@ -134,7 +133,6 @@ If Google Forms submit cannot be tracked yet, temporarily use these as secondary
 form_brand_start
 form_node_start
 whatsapp_click
-calendly_click
 ```
 
 ## QA
