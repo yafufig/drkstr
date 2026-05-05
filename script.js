@@ -7,38 +7,110 @@ const placeholderUrls = new Set([
   'CALENDLY_URL'
 ]);
 
-function pushEvent(name, params = {}) {
-  window.dataLayer.push({ event: name, page_location: window.location.href, ...params });
+const allowedParamKeys = [
+  'audience',
+  'category',
+  'city',
+  'cta_text',
+  'destination',
+  'form_type',
+  'menu_target',
+  'monthly_orders_range',
+  'page_path',
+  'question',
+  'section',
+  'sku_count_range',
+  'source',
+  'space_type'
+];
+
+function compactParams(params) {
+  return Object.fromEntries(
+    Object.entries(params).filter((entry) => entry[1] !== undefined && entry[1] !== '')
+  );
+}
+
+function trackEvent(eventName, params = {}) {
+  const safeParams = Object.fromEntries(
+    Object.entries(params).filter(([key]) => allowedParamKeys.includes(key))
+  );
+  const payload = compactParams({
+    event: eventName,
+    page_location: window.location.href,
+    page_path: window.location.pathname,
+    ...safeParams
+  });
+
+  window.dataLayer.push(payload);
+}
+
+function getTrackingParams(el) {
+  const params = {
+    cta_text: el.textContent.trim(),
+    section: el.dataset.section,
+    audience: el.dataset.audience,
+    form_type: el.dataset.formType,
+    destination: el.dataset.destination,
+    menu_target: el.dataset.menuTarget
+  };
+
+  return Object.fromEntries(
+    Object.entries(params).filter(([key, value]) => allowedParamKeys.includes(key) && value)
+  );
 }
 
 function trackRedirectConversions() {
+  if (document.body.dataset.submitEvent) {
+    return;
+  }
+
   const params = new URLSearchParams(window.location.search);
   const submitted = params.get('submitted');
   const conversionMap = {
-    brand: 'form_brand_submit',
-    node: 'form_node_submit'
+    brand: {
+      event: 'form_brand_submit',
+      params: { form_type: 'brand', audience: 'brand', source: 'external_form_redirect' }
+    },
+    node: {
+      event: 'form_node_submit',
+      params: { form_type: 'node', audience: 'node', source: 'external_form_redirect' }
+    }
   };
 
   if (conversionMap[submitted]) {
-    pushEvent(conversionMap[submitted], { source: 'external_form_redirect' });
+    trackEvent(conversionMap[submitted].event, conversionMap[submitted].params);
   }
 }
 
+function trackThankYouPage() {
+  const { submitEvent, formType, audience } = document.body.dataset;
+
+  if (!submitEvent) {
+    return;
+  }
+
+  trackEvent(submitEvent, {
+    form_type: formType,
+    audience,
+    source: 'thank_you_page'
+  });
+}
+
 trackRedirectConversions();
+trackThankYouPage();
 
 document.querySelectorAll('[data-event]').forEach((el) => {
   el.addEventListener('click', (event) => {
     const href = el.getAttribute('href') || '';
+    const trackingParams = getTrackingParams(el);
 
-    pushEvent(el.dataset.event, {
-      cta_text: el.textContent.trim(),
-      cta_href: href
-    });
+    trackEvent(el.dataset.event, trackingParams);
 
     if (el.dataset.formStart) {
-      pushEvent(el.dataset.formStart, {
-        cta_text: el.textContent.trim(),
-        cta_href: href
+      trackEvent(el.dataset.formStart, {
+        form_type: el.dataset.formType,
+        audience: el.dataset.audience,
+        section: el.dataset.section
       });
     }
 
@@ -53,11 +125,15 @@ document.querySelectorAll('details').forEach((detail) => {
   detail.addEventListener('toggle', () => {
     if (detail.open) {
       const summary = detail.querySelector('summary');
-      pushEvent('faq_open', { faq_question: summary ? summary.textContent.trim() : '' });
+      trackEvent('faq_open', {
+        question: summary ? summary.textContent.trim() : '',
+        section: 'faq'
+      });
     }
   });
 });
 
 // Replace placeholders before launch:
 // BRAND_FORM_URL, NODE_FORM_URL, WHATSAPP_URL, CALENDLY_URL.
-// External form success redirects can use ?submitted=brand or ?submitted=node.
+// External forms can redirect to /thanks-brand.html, /thanks-node.html,
+// or use /?submitted=brand and /?submitted=node.
