@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yafufig.github.io/drkstr/sitemap.xml
+Sitemap: https://drkstr.online/sitemap.xml
