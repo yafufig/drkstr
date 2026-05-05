@@ -19,7 +19,7 @@ Then open `http://localhost:8000`.
 - Keep the `CNAME` file in the repository root with `drkstr.online`
 - Analytics: GTM snippet only in the site (`GTM-WS3M6PPW`)
 - GA4 and Clarity should be configured inside GTM
-- Replace `WHATSAPP_URL`, `CALENDLY_URL`, and `SOFT_LEAD_FORM_URL` in `index.html` before launch if those actions should be visible
+- WhatsApp is configured in `index.html`; replace `CALENDLY_URL` and `SOFT_LEAD_FORM_URL` before launch if those actions should be visible
 - Configure external form success redirects to `https://drkstr.online/thanks-brand.html` and `https://drkstr.online/thanks-node.html` when possible
 - Query fallback is also supported: `https://drkstr.online/?submitted=brand` and `https://drkstr.online/?submitted=node`
 - Replace the placeholder legal/contact text in `privacy.html` before paid campaigns

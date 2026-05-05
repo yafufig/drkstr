@@ -74,7 +74,6 @@ img {
   padding: 92px 6vw;
 }
 
-.optional-link[href="WHATSAPP_URL"],
 .optional-link[href="CALENDLY_URL"],
 .optional-link[href="SOFT_LEAD_FORM_URL"] {
   display: none !important;

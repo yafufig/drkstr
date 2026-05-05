@@ -1,7 +1,6 @@
 window.dataLayer = window.dataLayer || [];
 
 const placeholderUrls = new Set([
-  'WHATSAPP_URL',
   'CALENDLY_URL',
   'SOFT_LEAD_FORM_URL'
 ]);
@@ -194,6 +193,6 @@ function trackViewSections() {
 trackViewSections();
 
 // Replace placeholders before launch:
-// WHATSAPP_URL, CALENDLY_URL, SOFT_LEAD_FORM_URL.
+// CALENDLY_URL, SOFT_LEAD_FORM_URL.
 // External forms can redirect to /thanks-brand.html, /thanks-node.html,
 // or use /?submitted=brand and /?submitted=node.
