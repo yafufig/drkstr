@@ -4,13 +4,23 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>DRKSTR México | Red urbana de fulfillment y entrega express</title>
-  <meta name="description" content="DRKSTR conecta marcas ecommerce con nodos urbanos de fulfillment en México. Coloca tus top-SKU cerca del cliente y entrega más rápido sin abrir bodegas.">
+  <meta name="description" content="DRKSTR conecta marcas ecommerce con nodos urbanos de fulfillment en México. Coloca tus top-SKU cerca del cliente y entrega más rápido sin abrir bodegas propias.">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://drkstr.online/">
-  <meta property="og:title" content="DRKSTR México - Urban fulfillment network">
-  <meta property="og:description" content="Inventario local, nodos urbanos y entregas más rápidas para ecommerce en CDMX.">
-  <meta property="og:image" content="https://drkstr.online/assets/og-drkstr-mexico.png">
+  <link rel="alternate" hreflang="es-MX" href="https://drkstr.online/">
+  <link rel="alternate" hreflang="en" href="https://drkstr.online/en/">
+  <link rel="alternate" hreflang="x-default" href="https://drkstr.online/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DRKSTR México">
+  <meta property="og:title" content="DRKSTR México — Red urbana de fulfillment">
+  <meta property="og:description" content="Inventario local, nodos urbanos y entregas más rápidas para ecommerce en México.">
   <meta property="og:url" content="https://drkstr.online/">
+  <meta property="og:image" content="https://drkstr.online/assets/og-drkstr-mexico.png">
+  <meta property="og:locale" content="es_MX">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DRKSTR México — Red urbana de fulfillment">
+  <meta name="twitter:description" content="Inventario local, nodos urbanos y entregas más rápidas para ecommerce en México.">
+  <meta name="twitter:image" content="https://drkstr.online/assets/og-drkstr-mexico.png">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
   <!-- Google Tag Manager -->
@@ -29,18 +39,27 @@
       {
         "@type": "Organization",
         "@id": "https://drkstr.online/#organization",
-        "name": "DRKSTR Mexico",
+        "name": "DRKSTR México",
         "url": "https://drkstr.online/",
-        "logo": "https://drkstr.online/assets/logo-drkstr.svg"
+        "logo": "https://drkstr.online/assets/og-drkstr-mexico.png",
+        "description": "DRKSTR México conecta marcas ecommerce con nodos urbanos de fulfillment para acercar inventario y acelerar entregas.",
+        "sameAs": []
       },
       {
         "@type": "Service",
         "@id": "https://drkstr.online/#service",
-        "name": "Urban fulfillment network for ecommerce brands",
-        "provider": { "@id": "https://drkstr.online/#organization" },
-        "areaServed": "Mexico City",
-        "serviceType": "Urban fulfillment, node network, pick-pack and delivery handoff",
-        "description": "DRKSTR connects ecommerce brands with urban spaces that can operate as fulfillment nodes for a CDMX pilot."
+        "name": "Urban fulfillment network for ecommerce in Mexico",
+        "provider": {
+          "@type": "Organization",
+          "name": "DRKSTR México",
+          "url": "https://drkstr.online/"
+        },
+        "areaServed": [
+          { "@type": "Country", "name": "Mexico" },
+          { "@type": "City", "name": "Mexico City" }
+        ],
+        "serviceType": "Ecommerce fulfillment, urban fulfillment nodes, express delivery enablement",
+        "description": "DRKSTR helps ecommerce brands place top-SKU closer to customers through partner-operated urban fulfillment nodes in Mexico."
       },
       {
         "@type": "FAQPage",
@@ -48,18 +67,50 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "¿DRKSTR es una empresa de mensajería?",
+            "name": "¿Qué es una dark store o tienda oscura?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No solo. DRKSTR es una red de fulfillment urbano que conecta inventario, nodos, procesos y handoff de entrega."
+              "text": "Una dark store o tienda oscura es un espacio cerrado al público donde se almacena inventario y se preparan pedidos online para entrega. DRKSTR usa una lógica similar, pero con una red de nodos urbanos operados por partners."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Ya operan en México?",
+            "name": "¿DRKSTR es una empresa de mensajería?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "DRKSTR esta preparando un piloto inicial en CDMX y seleccionando marcas y espacios fundadores."
+              "text": "No solo. DRKSTR conecta inventario, nodos urbanos, preparación de pedidos y handoff de entrega. La velocidad no depende solo del courier, sino de tener inventario más cerca del cliente."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué es un nodo urbano de fulfillment?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es un espacio operativo en ciudad que puede recibir inventario, almacenarlo, preparar pedidos y entregarlos a un courier o partner logístico."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué marcas pueden aplicar?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Marcas ecommerce, sellers y retailers con productos de alta rotación, demanda online y necesidad de entregas más rápidas en CDMX."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Qué espacios pueden convertirse en nodos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bodegas urbanas, locales con backroom, puntos logísticos, pickup points y operadores capaces de cumplir procesos de recepción, almacenamiento, picking, packing y handoff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Puedo rentar una parte de mi bodega como nodo?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sí, puedes postular espacio disponible, pero no es una renta pasiva. Un nodo requiere operación, horarios, orden, control de inventario y cumplimiento de procesos."
             }
           },
           {
@@ -67,23 +118,15 @@
             "name": "¿Cuánto inventario necesito colocar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Para el piloto recomendamos empezar con inventario limitado y top-SKU. La meta es validar rotacion, zonas y operacion antes de escalar."
+              "text": "Para el piloto recomendamos empezar con inventario limitado y top-SKU. La meta es validar rotación, zonas y operación antes de escalar."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Tengo que firmar algo antes de aplicar?",
+            "name": "¿DRKSTR opera en toda México?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. La aplicacion solo ayuda a revisar fit. Si hay match, el siguiente paso es una llamada y la definicion de proximos pasos."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "¿DRKSTR opera la entrega o conecta la operación?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "DRKSTR conecta inventario, nodos, procesos y handoff de entrega. En el MVP se puede iniciar con flujos simples y partners externos antes de automatizar integraciones profundas."
+              "text": "Estamos iniciando con un piloto enfocado en CDMX. La expansión a otras ciudades dependerá de la demanda de marcas y la disponibilidad de nodos operables."
             }
           }
         ]
@@ -99,7 +142,7 @@
 
   <header class="nav">
     <a href="/" class="logo" aria-label="DRKSTR Mexico home" data-event="menu_click" data-section="nav" data-menu-target="home">
-      <img src="assets/logo-drkstr.svg" alt="DRKSTR Mexico">
+      <img src="assets/logo-drkstr.svg" alt="DRKSTR México" width="720" height="160">
     </a>
     <nav aria-label="Principal">
       <a href="#brands" data-event="menu_click" data-section="nav" data-menu-target="brands">Marcas</a>
@@ -114,8 +157,8 @@
     <section class="hero section-grid">
       <div class="hero-copy">
         <p class="eyebrow">FOUNDING PILOT CDMX</p>
-        <h1>LA RED URBANA PARA ENTREGAR MÁS RÁPIDO</h1>
-        <p class="lead">Conectamos marcas ecommerce con espacios urbanos listos para operar como nodos de fulfillment. Tus productos más cerca. Tus pedidos más rápidos.</p>
+        <h1>LA RED URBANA DE FULFILLMENT PARA ENTREGAR MÁS RÁPIDO</h1>
+        <p class="lead">DRKSTR México es una red urbana de fulfillment que conecta marcas ecommerce con nodos urbanos operados por partners para acercar inventario, preparar pedidos y habilitar entregas más rápidas en CDMX.</p>
         <div class="cta-row">
           <a class="btn primary" href="#brands" data-event="hero_cta_brand_click" data-section="hero" data-audience="brand">Ver si mi marca aplica</a>
           <a class="btn secondary" href="#nodes" data-event="hero_cta_node_click" data-section="hero" data-audience="node">Evaluar mi espacio como nodo</a>
@@ -131,7 +174,7 @@
           <span>ORDER</span>
           <span>DELIVERY</span>
         </div>
-        <img src="assets/hero-network.svg" alt="Brand, node, order and delivery network">
+        <img src="assets/hero-network.svg" alt="Red urbana de fulfillment DRKSTR para ecommerce en México" width="1000" height="700">
         <div class="metric-grid">
           <div><strong>Top-SKU</strong><span>inventario local</span></div>
           <div><strong>CDMX</strong><span>zonas piloto</span></div>
@@ -171,8 +214,8 @@
     <section id="how" class="section platform">
       <div class="section-head">
         <p class="eyebrow">HOW IT WORKS</p>
-        <h2>TUS PRODUCTOS. NUESTRA RED. ENTREGA LOCAL.</h2>
-        <p class="wide">DRKSTR coloca SKU de mayor rotación en nodos urbanos conectados por tecnología. Cuando llega un pedido, el nodo prepara el producto y hace el handoff para entregar más rápido desde una ubicación cercana.</p>
+        <h2>CÓMO FUNCIONA LA RED DRKSTR</h2>
+        <p class="wide">DRKSTR coloca SKU de mayor rotación en nodos urbanos conectados por tecnología. Cuando llega un pedido, el nodo prepara el producto y hace el handoff para entrega local desde una ubicación cercana.</p>
       </div>
       <div class="steps">
         <div><span>01</span><h3>STORE</h3><p>La marca envía inventario limitado de top-SKU.</p></div>
@@ -198,8 +241,8 @@
       <div class="branch-hero">
         <div>
           <p class="eyebrow">FOR BRANDS</p>
-          <h2>VENDE CON ENTREGA EXPRESS SIN ABRIR BODEGAS</h2>
-          <p class="wide">Si ya tienes demanda online, DRKSTR te ayuda a probar inventario local en CDMX: top-SKU cerca del cliente, operación ligera y aprendizaje antes de escalar.</p>
+          <h2>FULFILLMENT URBANO PARA MARCAS ECOMMERCE</h2>
+          <p class="wide">Para marcas ecommerce, DRKSTR permite probar fulfillment urbano sin abrir una bodega propia. La marca coloca inventario limitado de sus top-SKU en zonas piloto, y el nodo prepara pedidos para habilitar entregas más rápidas.</p>
         </div>
         <div class="branch-visual pink-shelf" aria-hidden="true">
           <span>SKU</span>
@@ -268,6 +311,29 @@
       </div>
     </section>
 
+    <section id="dark-stores" class="section seo-band">
+      <p class="eyebrow">DARK STORES</p>
+      <h2>DARK STORES, TIENDAS OSCURAS Y NODOS URBANOS</h2>
+      <p class="wide">Un nodo DRKSTR funciona como una dark store o tienda oscura: un espacio operativo cerrado al público donde se almacena inventario, se preparan pedidos online y se realiza el handoff para entrega. La diferencia es que DRKSTR no depende solo de bodegas propias: buscamos una red de nodos urbanos operados por partners.</p>
+      <div class="cards three">
+        <article><h3>Micro-fulfillment</h3><p>Centros de micro-fulfillment y bodegas urbanas para ecommerce, pensadas para inventario local y top-SKU.</p></article>
+        <article><h3>Pick & pack</h3><p>Recepción, almacenamiento, preparación de pedidos, picking, packing y handoff con procesos medibles.</p></article>
+        <article><h3>Asset-light</h3><p>Una red distribuida de puntos logísticos urbanos y espacios operados por partners, no solo una bodega central.</p></article>
+      </div>
+    </section>
+
+    <section class="section internal-links">
+      <p class="eyebrow">EXPLORE</p>
+      <h2>FULFILLMENT, DARK STORES Y NODOS EN MÉXICO</h2>
+      <div class="link-grid">
+        <a href="/marcas/" data-event="menu_click" data-section="seo_links" data-menu-target="marcas">Fulfillment para marcas ecommerce</a>
+        <a href="/nodos/" data-event="menu_click" data-section="seo_links" data-menu-target="nodos">Convertir tu espacio en nodo</a>
+        <a href="/dark-stores/" data-event="menu_click" data-section="seo_links" data-menu-target="dark_stores">Dark stores y tiendas oscuras</a>
+        <a href="/fulfillment-cdmx/" data-event="menu_click" data-section="seo_links" data-menu-target="fulfillment_cdmx">Fulfillment CDMX</a>
+        <a href="/entrega-express-ecommerce/" data-event="menu_click" data-section="seo_links" data-menu-target="entrega_express">Entrega express ecommerce</a>
+      </div>
+    </section>
+
     <section id="after-apply" class="section after-apply" data-view-event="after_apply_view" data-section="after_apply">
       <p class="eyebrow">NEXT STEP</p>
       <h2>QUÉ PASA DESPUÉS DE APLICAR</h2>
@@ -298,7 +364,7 @@
 
     <section class="section forms">
       <p class="eyebrow">APPLICATIONS</p>
-      <h2>APLICA AL PILOTO</h2>
+      <h2>APLICA AL PILOTO CDMX</h2>
       <p class="wide">Cuéntanos lo mínimo necesario para entender si hay fit. No vendemos promesas: validamos demanda, ubicación, operación y próximos pasos.</p>
       <div class="forms-grid">
         <article id="brand-application">
@@ -357,13 +423,14 @@
     <section id="faq" class="section faq">
       <p class="eyebrow">FAQ</p>
       <h2>PREGUNTAS FRECUENTES</h2>
-      <details><summary>¿DRKSTR es una empresa de mensajería?</summary><p>No solo. DRKSTR es una red de fulfillment urbano. Conectamos inventario, nodos, preparación de pedidos y handoff de entrega.</p></details>
-      <details><summary>¿Ya operan en México?</summary><p>Estamos preparando un piloto inicial en CDMX y seleccionando marcas y espacios fundadores. No prometemos una red nacional antes de validar la liquidez local.</p></details>
+      <details><summary>¿Qué es una dark store o tienda oscura?</summary><p>Una dark store o tienda oscura es un espacio cerrado al público donde se almacena inventario y se preparan pedidos online para entrega. DRKSTR usa una lógica similar, pero con una red de nodos urbanos operados por partners.</p></details>
+      <details><summary>¿DRKSTR es una empresa de mensajería?</summary><p>No solo. DRKSTR conecta inventario, nodos urbanos, preparación de pedidos y handoff de entrega. La velocidad no depende solo del courier, sino de tener inventario más cerca del cliente.</p></details>
+      <details><summary>¿Qué es un nodo urbano de fulfillment?</summary><p>Es un espacio operativo en ciudad que puede recibir inventario, almacenarlo, preparar pedidos y entregarlos a un courier o partner logístico.</p></details>
+      <details><summary>¿Qué marcas pueden aplicar?</summary><p>Marcas ecommerce, sellers y retailers con productos de alta rotación, demanda online y necesidad de entregas más rápidas en CDMX.</p></details>
+      <details><summary>¿Qué espacios pueden convertirse en nodos?</summary><p>Bodegas urbanas, locales con backroom, puntos logísticos, pickup points y operadores capaces de cumplir procesos de recepción, almacenamiento, picking, packing y handoff.</p></details>
+      <details><summary>¿Puedo rentar una parte de mi bodega como nodo?</summary><p>Sí, puedes postular espacio disponible, pero no es una renta pasiva. Un nodo requiere operación, horarios, orden, control de inventario y cumplimiento de procesos.</p></details>
       <details><summary>¿Cuánto inventario necesito colocar?</summary><p>Para el piloto recomendamos empezar con inventario limitado y top-SKU. La meta es validar rotación, zonas y operación antes de escalar.</p></details>
-      <details><summary>¿Tengo que firmar algo antes de aplicar?</summary><p>No. La aplicación solo nos ayuda a revisar fit. Si hay match, avanzamos a una llamada y definimos próximos pasos.</p></details>
-      <details><summary>¿DRKSTR opera la entrega o conecta la operación?</summary><p>DRKSTR conecta inventario, nodos, procesos y handoff de entrega. En el MVP podemos iniciar con flujos simples y partners externos antes de automatizar integraciones profundas.</p></details>
-      <details><summary>¿Es ingreso pasivo para dueños de espacios?</summary><p>No exactamente. Un nodo requiere operación, horarios, recepción, picking, packing y cumplimiento de procesos.</p></details>
-      <details><summary>¿Qué zonas entran en el piloto?</summary><p>La selección depende de la concentración de demanda de marcas y la disponibilidad de espacios operables. La prioridad inicial es CDMX.</p></details>
+      <details><summary>¿DRKSTR opera en toda México?</summary><p>Estamos iniciando con un piloto enfocado en CDMX. La expansión a otras ciudades dependerá de la demanda de marcas y la disponibilidad de nodos operables.</p></details>
     </section>
   </main>
 

@@ -1,6 +1,6 @@
 # DRKSTR Mexico Landing
 
-Static GitHub Pages landing page for the DRKSTR Mexico CDMX founding pilot.
+Static SEO site for the DRKSTR Mexico CDMX founding pilot.
 
 Production URL: `https://drkstr.online/`.
 
@@ -14,7 +14,7 @@ Then open `http://localhost:8000`.
 
 ## Launch Notes
 
-- Hosting: GitHub Pages from the `main` branch repository root
+- Hosting: static site from the `main` branch repository root
 - Custom domain: `drkstr.online`
 - Keep the `CNAME` file in the repository root with `drkstr.online`
 - Analytics: GTM snippet only in the site (`GTM-WS3M6PPW`)
@@ -29,7 +29,9 @@ Then open `http://localhost:8000`.
 
 - `index.html`: Spanish Mexico landing page
 - `style.css`: responsive brutalist DRKSTR visual system
-- `script.js`: `dataLayer` CTA, CJM view, form-start, form-submit redirect, FAQ, WhatsApp, Calendly, soft-lead, sticky mobile, and privacy events
+- `script.js`: `dataLayer` CTA, CJM view, form-start, form-submit redirect, FAQ, WhatsApp, email, soft-lead, sticky mobile, and privacy events
 - `assets/`: logo, favicon, OG image, and hero network diagram
+- `marcas/`, `nodos/`, `dark-stores/`, `fulfillment-cdmx/`, `entrega-express-ecommerce/`: Spanish SEO pages
+- `en/`, `en/brands/`, `en/nodes/`: optional English SEO layer
 - `thanks-brand.html`, `thanks-node.html`: form success pages that fire submit events
-- `robots.txt`, `sitemap.xml`, `404.html`, `privacy.html`: GitHub Pages support files
+- `robots.txt`, `sitemap.xml`, `404.html`, `privacy.html`: crawl and support files
